@@ -33,11 +33,11 @@ index.search('Marie', {
 
 * ES6 / ES2015 is now used in the package code
 * Packages have been split up into several packages
- * `easysearch:core`: contains the Javascript API
- * `easysearch:components`: contains the Blaze Components
+ * `edushareontario:easysearch-core`: contains the Javascript API
+ * `edushareontario:easysearch-components`: contains the Blaze Components
  * `easy:search`: Wrapper package for components and core
- * `easysearch:elasticsearch`: ElasticSearch engine
- * `easysearch:autosuggest`: Autosuggest component
+ * `edushareontario:easysearch-elasticsearch`: ElasticSearch engine
+ * `edushareontario:easysearch-autosuggest`: Autosuggest component
 * `matteodem:easy-search` is now deprecated, switch to `easy:search` or one of the sub packages
 
 ## Index
@@ -72,13 +72,13 @@ index.search('Marie', {
 
 ## ElasticSearch
 
-* Not part of core anymore, add `easysearch:elasticsearch` to use
+* Not part of core anymore, add `edushareontario:easysearch-elasticsearch` to use
 * `body` configuration to change ES body
 * ElasticSearch client reachable through `index.config.elasticSearchClient`
 
 ## Autosuggest
 
-* Not part of core anymore, add `easysearch:autossugest` to use
+* Not part of core anymore, add `edushareontario:easysearch-autossugest` to use
 * Uses now `jeremy:selectize` for display logic
 
 There are a lot of new features too, feel free to [check them out](http://matteodem.github.io/meteor-easy-search/).

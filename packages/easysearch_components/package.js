@@ -1,18 +1,18 @@
 Package.describe({
-  name: 'easysearch:components',
-  summary: "Blaze Components for EasySearch",
-  version: "2.2.1",
-  git: "https://github.com/matteodem/meteor-easy-search.git",
+  name: 'edushareontario:easysearch-components',
+  summary: "Blaze Components for EasySearch with open ended dependencies!",
+  version: "2.1.0",
+  git: "https://github.com/EduShareOntario/meteor-easy-search.git",
   documentation: 'README.md'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.4.2');
+  api.versionsFrom('1.2.0.1');
 
   // Dependencies
-  api.use(['check', 'reactive-dict', 'ecmascript', 'random', 'underscore', 'tracker', 'mongo']);
-  api.use(['peerlibrary:blaze-components@0.16.0', 'easysearch:core@2.1.10']);
-  api.use(['erasaur:meteor-lodash@4.0.0'], { weak: true });
+  api.use(['check', 'reactive-dict', 'ecmascript', 'random', 'underscore', 'tracker']);
+  api.use(['peerlibrary:blaze-components', 'edushareontario:easysearch-core']);
+  api.use(['erasaur:meteor-lodash'], { weak: true });
 
   // Base Component
   api.addFiles(['lib/base.js', 'lib/single-index.js', 'lib/component-methods.js', 'lib/core.js'], 'client');
@@ -32,13 +32,11 @@ Package.onUse(function(api) {
   ], 'client');
 
   api.export('EasySearch');
-
-  api.mainModule('lib/main.js');
 });
 
 Package.onTest(function(api) {
-  api.use(['tinytest', 'ecmascript', 'tracker', 'underscore', 'mongo']);
-  api.use('easysearch:components');
+  api.use(['tinytest', 'ecmascript', 'tracker', 'underscore']);
+  api.use('edushareontario:easysearch-components');
 
   // Test Helpers
   api.addFiles(['tests/helpers.js']);

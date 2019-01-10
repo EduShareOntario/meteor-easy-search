@@ -24,5 +24,5 @@ You can pass in following parameters to the `EasySearch.Autosuggest` component.
 
 ```sh
 cd /path/to/project
-meteor add easysearch:autosuggest
+meteor add edushareontario:easysearch-autosuggest
 ```

@@ -1,34 +1,33 @@
 Package.describe({
-  name: 'easysearch:elasticsearch',
-  summary: "Elasticsearch Engine for EasySearch",
-  version: "2.2.0",
-  git: "https://github.com/matteodem/meteor-easy-search.git",
+  name: 'edushareontario:easysearch-elasticsearch',
+  summary: "Elasticsearch Engine for EasySearch with open ended dependencies!",
+  version: "2.1.0",
+  git: "https://github.com/EduShareOntario/meteor-easy-search.git",
   documentation: 'README.md'
 });
 
 Npm.depends({
-  'elasticsearch': '13.0.0'
+  'elasticsearch': '8.2.0'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.4.2');
+  api.versionsFrom('1.2.0.1');
 
   // Dependencies
   api.use(['check', 'ecmascript']);
-  api.use(['easysearch:core@2.2.0', 'erasaur:meteor-lodash@4.0.0']);
+  api.use(['edushareontario:easysearch-core', 'erasaur:meteor-lodash']);
 
   api.addFiles([
     'lib/data-syncer.js',
-    'lib/engine.js',
+    'lib/engine.js'
   ]);
 
   api.export('EasySearch');
-  api.mainModule('./lib/main.js');
 });
 
 Package.onTest(function(api) {
   api.use(['tinytest', 'ecmascript']);
-  api.use('easysearch:elasticsearch');
+  api.use('edushareontario:easysearch-elasticsearch');
 
   api.addFiles(['tests/engine-tests.js']);
 });

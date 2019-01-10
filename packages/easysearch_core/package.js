@@ -1,17 +1,17 @@
 Package.describe({
-  name: 'easysearch:core',
-  summary: "Javascript Core for EasySearch",
-  version: "2.2.0",
-  git: "https://github.com/matteodem/meteor-easy-search.git",
+  name: 'edushareontario:easysearch-core',
+  summary: "Javascript Core for EasySearch with open ended dependencies!",
+  version: "2.1.0",
+  git: "https://github.com/EduShareOntario/meteor-easy-search.git",
   documentation: 'README.md'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.4.2');
+  api.versionsFrom('1.2.0.1');
 
   // Dependencies
   api.use(['check', 'ecmascript', 'mongo', 'underscore']);
-  api.use(['erasaur:meteor-lodash@4.0.0'], { weak: true });
+  api.use(['erasaur:meteor-lodash'], { weak: true });
 
   // Core packages
   api.addFiles([
@@ -31,14 +31,13 @@ Package.onUse(function(api) {
 
   // Global
   api.addFiles(['lib/globals.js']);
-  api.export('EasySearch');
 
-  api.mainModule('lib/main.js');
+  api.export('EasySearch');
 });
 
 Package.onTest(function(api) {
   api.use(['tinytest', 'mongo', 'tracker', 'ecmascript', 'audit-argument-checks', 'underscore']);
-  api.use('easysearch:core');
+  api.use('edushareontario:easysearch-core');
 
   // Test Helpers
   api.addFiles(['tests/helpers.js']);

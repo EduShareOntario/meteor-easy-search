@@ -1,9 +1,12 @@
 language: node_js
 node_js:
-  - "4.8.1"
+  - "0.12"
 before_install:
-  - "curl https://install.meteor.com | /bin/sh"
-  - export PATH="$HOME/.meteor:$PATH"
-  - "npm install -g spacejam"
+  - "curl -L http://git.io/ejPSng | /bin/sh"
+sudo: required
+env:
+  - PACKAGES=./packages/edushareontario:easysearch-core PACKAGE_DIRS=./packages/
+  - PACKAGES=./packages/edushareontario:easysearch-components PACKAGE_DIRS=./packages/
+  - PACKAGES=./packages/edushareontario:easysearch-elasticsearch PACKAGE_DIRS=./packages/
+  - PACKAGES=./packages/edushareontario:easysearch-autosuggest PACKAGE_DIRS=./packages/
 
-script: "sh ./scripts/test-packages.sh"

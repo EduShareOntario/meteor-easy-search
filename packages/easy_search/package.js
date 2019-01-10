@@ -1,21 +1,15 @@
 Package.describe({
   name: 'easy:search',
-  summary: "Easy-to-use search with Blaze Components (+ Elastic Search Support)",
-  version: "2.2.1",
-  git: "https://github.com/matteodem/meteor-easy-search.git",
+  summary: "Easy-to-use search with Blaze Components (+ Elastic Search Support) with open ended dependencies!",
+  version: "2.1.0",
+  git: "https://github.com/EduShareOntario/meteor-easy-search.git",
   documentation: "../../README.md"
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.4.2');
+  api.versionsFrom('1.2.0.1');
 
-  api.use([
-    'ecmascript',
-    'easysearch:core@2.2.0',
-    'easysearch:components@2.2.1',
-  ]);
+  api.use(['edushareontario:easysearch-core', 'edushareontario:easysearch-components']);
 
   api.export('EasySearch');
-
-  api.mainModule('./main.js');
 });
