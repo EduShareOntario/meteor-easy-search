@@ -7,11 +7,11 @@ Package.describe({
 });
 
 Npm.depends({
-  'elasticsearch': '8.2.0'
+  'elasticsearch': '15.3.0'
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.2.0.1');
+  api.versionsFrom('METEOR@1.4.4.5');
 
   // Dependencies
   api.use(['check', 'ecmascript']);

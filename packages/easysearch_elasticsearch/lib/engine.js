@@ -119,6 +119,11 @@ if (Meteor.isServer) {
        */
       client: {
         host: 'localhost:9200',
+        apiVersion: '_default',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
       },
     };
   }

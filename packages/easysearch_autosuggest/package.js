@@ -7,7 +7,7 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.2.0.1');
+  api.versionsFrom('METEOR@1.4.4.5');
 
   // Dependencies
   api.use(['check', 'ecmascript', 'templating', 'blaze']);
