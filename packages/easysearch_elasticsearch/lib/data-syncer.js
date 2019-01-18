@@ -13,7 +13,7 @@ class ElasticSearchDataSyncer {
    * @param client       {Object}   ElasticSearch client
    * @param beforeIndex  {Function} Change document before indexing
    */
-  constructor({indexName, indexType, collection, client, beforeIndex}) {
+  constructor({indexName, indexType, collection, observingQuery, client, beforeIndex}) {
     this.indexName = indexName;
     this.indexType = indexType;
     this.collection = collection;
@@ -24,7 +24,7 @@ class ElasticSearchDataSyncer {
       return rest;
     }
 
-    this.collection.find().observeChanges({
+    this.collection.find(observingQuery || {}).observeChanges({
       added: (id, fields) => {
         this.writeToIndex(removeId(beforeIndex(fields)), id);
       },

@@ -192,6 +192,7 @@ if (Meteor.isServer) {
           indexName: this.config.indexName,
           indexType: this.getIndexType(indexConfig),
           collection: indexConfig.collection,
+          observingQuery: indexConfig.observingQuery || {},
           client: indexConfig.elasticSearchClient,
           beforeIndex: (doc) => this.callConfigMethod('getElasticSearchDoc', doc, this.callConfigMethod('fieldsToIndex', indexConfig))
         });
