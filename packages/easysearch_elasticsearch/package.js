@@ -1,7 +1,7 @@
 Package.describe({
   name: 'edushareontario:easysearch-elasticsearch',
   summary: "Elasticsearch Engine for EasySearch with open ended dependencies!",
-  version: "2.1.0",
+  version: "2.1.1",
   git: "https://github.com/EduShareOntario/meteor-easy-search.git",
   documentation: 'README.md'
 });
@@ -15,7 +15,7 @@ Package.onUse(function(api) {
 
   // Dependencies
   api.use(['check', 'ecmascript']);
-  api.use(['edushareontario:easysearch-core@2.1.0', 'erasaur:meteor-lodash@4.0.0']);
+  api.use(['edushareontario:easysearch-core@2.1.1', 'erasaur:meteor-lodash@4.0.0']);
 
   api.addFiles([
     'lib/data-syncer.js',

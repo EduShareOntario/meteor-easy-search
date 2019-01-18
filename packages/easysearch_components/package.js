@@ -1,7 +1,7 @@
 Package.describe({
   name: 'edushareontario:easysearch-components',
   summary: "Blaze Components for EasySearch, with Coffeescript2 compatible dependencies!",
-  version: "2.1.1",
+  version: "2.1.2",
   git: "https://github.com/EduShareOntario/meteor-easy-search.git",
   documentation: 'README.md'
 });
@@ -11,7 +11,7 @@ Package.onUse(function(api) {
 
   // Dependencies
   api.use(['check', 'reactive-dict', 'ecmascript', 'random', 'underscore', 'tracker']);
-  api.use(['edushareontario:blaze-components@0.22.1', 'edushareontario:easysearch-core@2.1.1']);
+  api.use(['edushareontario:blaze-components@0.22.2', 'edushareontario:easysearch-core@2.1.1']);
   api.use(['erasaur:meteor-lodash@4.0.0'], { weak: true });
 
   // Base Component

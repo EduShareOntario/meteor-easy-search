@@ -3,7 +3,7 @@ if exist "packages\easy_search" (
     meteor publish
     cd ..\easysearch_components
     meteor publish
-    cd ..\easy:search
+    cd ..\easy_search
     meteor publish
     cd ..\easysearch_autosuggest
     meteor publish
