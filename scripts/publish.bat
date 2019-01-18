@@ -2,13 +2,13 @@ if exist "packages\easy_search" (
     cd packages\easysearch_core
     meteor publish
     cd ..\easysearch_components
-    meteor publish --create
+    meteor publish
     cd ..\easy:search
-    meteor publish --create
+    meteor publish
     cd ..\easysearch_autosuggest
-    meteor publish --create
+    meteor publish
     cd ..\easysearch_elasticsearch
-    meteor publish --create
+    meteor publish
     cd ..\..
 )
 else (
