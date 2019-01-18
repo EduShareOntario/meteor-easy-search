@@ -12,6 +12,7 @@ import { ElasticSearchEngine } from 'meteor/easysearch:elasticsearch'
 const Players = new Mongo.Collection('players')
 const PlayersIndex = new Index({
   collection: Players,
+  observingQuery: { created: {$gte: new Date()} },
   fields: ['name'],
   engine: new ElasticSearchEngine({
     body: () => { ... } // modify the body that's sent when searching

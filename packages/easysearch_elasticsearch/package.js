@@ -1,7 +1,7 @@
 Package.describe({
   name: 'edushareontario:easysearch-elasticsearch',
-  summary: "Elasticsearch Engine for EasySearch with open ended dependencies!",
-  version: "2.1.1",
+  summary: "Elasticsearch Engine for EasySearch, with observing optimization ability.",
+  version: "2.2.0",
   git: "https://github.com/EduShareOntario/meteor-easy-search.git",
   documentation: 'README.md'
 });
