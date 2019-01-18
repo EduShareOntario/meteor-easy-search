@@ -1,7 +1,7 @@
 Package.describe({
   name: 'edushareontario:easysearch-core',
-  summary: "Javascript Core for EasySearch with open ended dependencies!",
-  version: "2.1.0",
+  summary: "Javascript Core for EasySearch, with Coffeescript2 compatible dependencies!",
+  version: "2.1.1",
   git: "https://github.com/EduShareOntario/meteor-easy-search.git",
   documentation: 'README.md'
 });

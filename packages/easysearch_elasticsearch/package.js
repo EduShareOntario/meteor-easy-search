@@ -15,7 +15,7 @@ Package.onUse(function(api) {
 
   // Dependencies
   api.use(['check', 'ecmascript']);
-  api.use(['edushareontario:easysearch-core', 'erasaur:meteor-lodash']);
+  api.use(['edushareontario:easysearch-core@2.1.0', 'erasaur:meteor-lodash@4.0.0']);
 
   api.addFiles([
     'lib/data-syncer.js',
